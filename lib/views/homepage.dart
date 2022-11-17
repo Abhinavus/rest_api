@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:flutter/material.dart';
 import 'package:rest_api/services/remote_service.dart';
@@ -42,20 +42,8 @@ var isLoaded =false;
     child: ListView.builder(
       itemCount: posts?.length,
       itemBuilder: (context, index) {
-      return 
-          Row(
-            children: [
-              Container( width: 50, height: 50,
-                child:
-                    Image.network(posts![index].url),
-                    
-                    
-                    
-                  
-
-              ),
-            ],
-          );
+      return ListTile(leading: Text(posts![index].title),);
+          
       
       
 
